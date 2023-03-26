@@ -1,0 +1,28 @@
+h3 {
+    font-family: 'Red Hat Text', sans-serif;
+}
+p {
+    font-family: 'Red Hat Text', sans-serif;
+}
+/* .main{
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+} */
