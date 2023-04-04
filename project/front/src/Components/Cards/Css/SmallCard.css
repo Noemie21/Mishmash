@@ -1,0 +1,73 @@
+h3 {
+    font-family: 'Red Hat Text', sans-serif; 
+}
+p {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.Flipcard,.Flipcard-back,.Flipcard-flipper,.Flipcard-front{
+    outline:0;
+    -webkit-box-shadow:none;
+    box-shadow:none
+}
+.Flipcard-back,.Flipcard-front{
+    z-index:0;
+    overflow-x:hidden
+}
+@-moz-document url-prefix(){
+    .Flipcard{
+        perspective:none!important
+    }
+}
+.Flipcard{
+    -webkit-perspective:1000px;
+    perspective:1000px;
+    width:100%;
+    border-radius: 1.5rem;
+}
+.Flipcard-flipper{
+    -webkit-transition:.6s ease-in;
+    transition:.6s ease-in;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    position:relative;
+    width:100%;
+    
+}
+.Flipcard-back,.Flipcard-front{
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    -webkit-transition:opacity .4s ease-in,-webkit-transform .4s ease-in;
+    transition:opacity .4s ease-in,-webkit-transform .4s ease-in;
+    transition:transform .4s ease-in,opacity .4s ease-in;
+    transition:transform .4s ease-in,opacity .4s ease-in,-webkit-transform .4s ease-in;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    -webkit-transform:rotateY(0);
+    transform:rotateY(0);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 35vh;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.08);
+    background-color: white;
+}
+.Flipcard-front{
+    z-index:2;
+    -webkit-transform:rotateY(0);
+    transform:rotateY(0);
+}
+.Flipcard-back{
+    -webkit-transform:rotateY(180deg);
+    transform:rotateY(180deg)
+}
+.Flipcard--horizontal.Flipcard--flipped>.Flipcard-front{
+    -webkit-transform:rotateY(-180deg);
+    transform:rotateY(-180deg)
+}
+.Flipcard--horizontal.Flipcard--flipped>.Flipcard-back{
+    -webkit-transform:rotateY(0);
+    transform:rotateY(0)
+}
